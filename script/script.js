@@ -80,7 +80,7 @@ let ordColor = "no";
 
 const get = x => document.getElementById(x);
 const musicLink = [
-  //"https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FGoing%20Down%20by%20Jake%20Chudnow%20%5BHD%5D.mp3?v=1581538237884",
+  "https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FGoing%20Down%20by%20Jake%20Chudnow%20%5BHD%5D.mp3?v=1581538237884",
   "https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FHypnothis.mp3?v=1584285594822",
   "https://cdn.glitch.com/310d7aca-4728-445f-9084-db26ceccd7b5%2FArseniy%20Shkljaev%20-%20Nuclearoids%20%5BTrance%5D.mp3?v=1591548196791",
   "https://cdn.glitch.com/310d7aca-4728-445f-9084-db26ceccd7b5%2FHeaven%20and%20Hell%20-%20Jeremy%20Blake%20%5BMpgun.com%5D.mp3?v=1592859293921",
@@ -88,7 +88,7 @@ const musicLink = [
 ];
 const musicName = [
   "OFF",
-  //"Going Down by Jake Chudnow",
+  "Going Down by Jake Chudnow",
   "Kevin Macleod - Hypnothis [Royalty Free]",
   "Arseniy Shkljaev - Nuclearoids (http://arseniymusic.com/)",
   "Jeremy Blake - Heaven and Hell (YT Library) [Public Domain]",
@@ -848,7 +848,7 @@ function render() {
   get("chalMult").textContent =
     "Your " +
     getSumOfChallenges() +
-    " challenge completions have multiplied Tier 1 and 2 Automation by " +
+    " Ass completions have multiplied Tier 1 and 2 Automation by " +
     beautify(bfactorMult);
   for (let i = 1; i <= 9; i++) {
     iup(i, 1);
@@ -1252,11 +1252,11 @@ function beautifypower(number) {
     if (exponent > 100000) {
       exponent = Math.floor(Math.log10(number));
       mantissa = number / 10 ** exponent;
-      if (mantissa.toFixed(5) == "10.00000") return "e9.99999e" + exponent;
-      return "e" + mantissa.toFixed(5) + "e" + exponent;
+      if (mantissa.toFixed(5) == "10.00000") return "10<sup>9.99999×10<sup>" + exponent;
+      return "10<sup>" + mantissa.toFixed(5) + "×10<sup>" + exponent;
     }
-    if (mantissa.toFixed(2) == "10.00") return "9.99e" + exponent;
-    return mantissa.toFixed(2) + "e" + exponent;
+    if (mantissa.toFixed(2) == "10.00") return "9.99×10<sup>" + exponent;
+    return mantissa.toFixed(2) + "×10<sup>" + exponent;
   }
 }
 
@@ -1276,8 +1276,8 @@ function changeColor() {
 }
 
 function changeInt() {
-  let newms = prompt("Please type in the new millisecond interval (20≤x≤1000)");
-  if (20 <= Number(newms) && Number(newms) <= 1000 && !isNaN(Number(newms))) {
+  let newms = prompt("Please type in the new millisecond interval (1≤x≤1000)");
+  if (1 <= Number(newms) && Number(newms) <= 1000 && !isNaN(Number(newms))) {
     game.msint = Math.round(Number(newms));
     save();
     location.reload();
