@@ -30,7 +30,7 @@ function updateOptions() {
     ["Madore's", "Buchholz's", "Convenient"][game.buchholz];
   get("changeTheme").textContent =
     "Current Theme: " +
-    ["Light", "Dark", "Space (https://wallpaperplay.com/page-terms)"][
+    ["Light", "Dark", "Space (https://wallpaperplay.com/page-terms)","galaxy (fanmade)"][
       game.theme
     ];
   get("changeMusic").innerHTML = "Music: " + musicName[game.music];
